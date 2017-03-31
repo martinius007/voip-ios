@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="voip_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,210 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numbers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKU-GE-1xC">
+                                <rect key="frame" x="77" y="59.5" width="220" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="zT7-r0-i8X">
+                                <rect key="frame" x="57.5" y="156.5" width="260" height="354"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="jdx-kv-jLR">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqF-tm-dL1" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="1ar-iO-Mhg"/>
+                                                    <constraint firstAttribute="height" constant="72" id="hfU-WX-Zdn"/>
+                                                </constraints>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bO-F5-6ND"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-UT-jEC" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="46z-91-hZp"/>
+                                                    <constraint firstAttribute="width" constant="72" id="lnU-01-r6c"/>
+                                                </constraints>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIE-t3-scZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6G-r0-ZaV" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="1js-ue-zsZ"/>
+                                                    <constraint firstAttribute="height" constant="72" id="e47-Ma-QIR"/>
+                                                </constraints>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rsP-Fg-Txz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="FLB-j6-eGQ">
+                                        <rect key="frame" x="0.0" y="94" width="260" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SA9-ZQ-3CU" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="4eO-gY-5Y7"/>
+                                                    <constraint firstAttribute="width" constant="72" id="JGA-wa-2JS"/>
+                                                </constraints>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7I0-uB-ZTi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUh-qn-mma" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="D2a-bf-Thh"/>
+                                                    <constraint firstAttribute="width" constant="72" id="kEt-JX-qrf"/>
+                                                </constraints>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uXe-u3-wzn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUa-oM-hvQ" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="DBN-fI-ToG"/>
+                                                    <constraint firstAttribute="width" constant="72" id="PEM-tm-G1a"/>
+                                                </constraints>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QwW-tG-03d"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="alH-X7-dqb">
+                                        <rect key="frame" x="0.0" y="188" width="260" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBz-5k-8ES" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="OCn-Xk-um7"/>
+                                                    <constraint firstAttribute="height" constant="72" id="ytP-Xb-5HQ"/>
+                                                </constraints>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0yF-8z-beu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-MT-AOh" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="94" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="9wE-U4-ORT"/>
+                                                    <constraint firstAttribute="width" constant="72" id="rRx-c0-aXZ"/>
+                                                </constraints>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TqN-Hf-1uJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-yE-wRn" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="188" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="72" id="Fwg-YP-pUI"/>
+                                                    <constraint firstAttribute="height" constant="72" id="TwZ-WG-uyj"/>
+                                                </constraints>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nGU-Wv-f0P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="8MI-vU-vtN">
+                                        <rect key="frame" x="94" y="282" width="72" height="72"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGM-8c-KP1" customClass="CircleBorderedButton" customModule="voip_ios" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="KMg-kN-O1Y"/>
+                                                    <constraint firstAttribute="width" constant="72" id="re9-B2-NTC"/>
+                                                </constraints>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="tapNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipP-wC-eFb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your unique number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yef-s6-lZc">
+                                <rect key="frame" x="15" y="626" width="345" height="20.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNq-jv-9eC" customClass="CircleButton" customModule="voip_ios" customModuleProvider="target">
+                                <rect key="frame" x="151.5" y="532.5" width="72" height="72"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="CTb-0f-dv0"/>
+                                    <constraint firstAttribute="height" constant="72" id="H2F-2e-yji"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="CallStart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fQx-CE-ehk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPk-OY-PtB">
+                                <rect key="frame" x="307" y="62" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Dlj-tD-xYA"/>
+                                    <constraint firstAttribute="width" constant="22" id="caF-sK-a70"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Cancel"/>
+                                <connections>
+                                    <action selector="tapClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ydk-3J-Qrj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zT7-r0-i8X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="10d-6L-yBL"/>
+                            <constraint firstItem="PKU-GE-1xC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4C3-YI-wIN"/>
+                            <constraint firstItem="yef-s6-lZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8pb-G1-LjU"/>
+                            <constraint firstAttribute="trailing" secondItem="yef-s6-lZc" secondAttribute="trailing" constant="15" id="D6q-qE-2Kt"/>
+                            <constraint firstItem="PKU-GE-1xC" firstAttribute="width" secondItem="zT7-r0-i8X" secondAttribute="width" constant="-40" id="DCX-2k-KdZ"/>
+                            <constraint firstItem="yef-s6-lZc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="Fue-To-AKU"/>
+                            <constraint firstItem="XPk-OY-PtB" firstAttribute="leading" secondItem="PKU-GE-1xC" secondAttribute="trailing" constant="10" id="G2u-EW-PVe"/>
+                            <constraint firstItem="zT7-r0-i8X" firstAttribute="top" secondItem="PKU-GE-1xC" secondAttribute="bottom" constant="70.5" id="WMr-cZ-Wwa"/>
+                            <constraint firstItem="yef-s6-lZc" firstAttribute="top" secondItem="zNq-jv-9eC" secondAttribute="bottom" constant="21.5" id="Y51-yd-Fso"/>
+                            <constraint firstItem="zNq-jv-9eC" firstAttribute="top" secondItem="UGM-8c-KP1" secondAttribute="bottom" constant="22" id="kyQ-0X-Kcg"/>
+                            <constraint firstItem="zT7-r0-i8X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npQ-ud-ZVB"/>
+                            <constraint firstItem="zNq-jv-9eC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohN-WF-X9r"/>
+                            <constraint firstItem="XPk-OY-PtB" firstAttribute="centerY" secondItem="PKU-GE-1xC" secondAttribute="centerY" id="q8N-Q3-5KM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myNumberLabel" destination="yef-s6-lZc" id="vlN-QQ-Tcp"/>
+                        <outlet property="numberLabel" destination="PKU-GE-1xC" id="pwX-iA-n7t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CallStart" width="35" height="35"/>
+        <image name="Cancel" width="22" height="22"/>
+    </resources>
 </document>
